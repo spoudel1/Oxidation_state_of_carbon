@@ -4,8 +4,6 @@
 
 import sys
 
-#inputfile=open(sys.argv[1]).readlines()
-#outputfile=open(sys.argv[2],'w')
 Pox={} #store the oxidation states of all amino acid based on the paper
 Pox['A']=0.00;Pox['C']=0.66;Pox['D']=1.00;Pox['E']=0.40;Pox['F']=-0.44;Pox['G']=1.00;Pox['H']=0.66;Pox['I']=-1.00;Pox['K']=-0.66;Pox['L']=-1.00
 Pox['M']=-0.40;Pox['N']=1.00;Pox['P']=-0.40;Pox['Q']=0.40;Pox['R']=0.33;Pox['S']=0.66;Pox['T']=0.00;Pox['V']=-.80;Pox['W']=-0.18;Pox['Y']=-0.22
@@ -46,7 +44,7 @@ def getfile(file1):
 				oxidation,aminoa=findox(sequence)
 				_store[seq]=float(oxidation)/len(sequence)
 				_specifica[seq]=aminoa
-#				outputfile.write(seq+'\t'+str(len(sequence))+'\t'+str(oxidation)+'\t'+str(float(oxidation)/len(sequence))+'\n')
+#				outputfile.write(seq+'\t'+str(len(sequence))+'\t'+str(oxidation)+'\t'+str(float(oxidation)/len(sequence))+'\n') #this will spit oxidation state for each sequence so uncomment it if this is what you want.
 				sequence=''
 			else:
 				count=1
@@ -57,4 +55,4 @@ def getfile(file1):
 	_store[seq]=float(oxidation)/len(sequence)
 	_specifica[seq]=aminoa
 	return _store,_specifica
-#	outputfile.write(seq+'\t'+str(len(sequence))+'\t'+str(oxidation)+'\t'+str(float(oxidation)/len(sequence))+'\n')
+#	outputfile.write(seq+'\t'+str(len(sequence))+'\t'+str(oxidation)+'\t'+str(float(oxidation)/len(sequence))+'\n') # this will spit oxidation state of carbon for each sequence so uncomment this if that is what you want.

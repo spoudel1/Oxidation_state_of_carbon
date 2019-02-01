@@ -22,11 +22,7 @@ def dupcheck(name):
 			present=1
 			break
 	return present
-#highprotein=open(sys.argv[2],'w')
-#path="../GoatMaster/Archaeal_genome/"
-#path="../Archaeal_genome_table"
-path="../Metagenomes/" #for metagenomes
-#path="test/"
+path="." #folder path that contains genomes/metagenomes
 average_ox=0.0
 start=time.time()
 for root,dirs,files in os.walk(path):
@@ -46,8 +42,10 @@ for root,dirs,files in os.walk(path):
 							_newstore[ts]=tst
 				for ab, bc in _newstore.items():
 						outputfile.write('\t'+ab+'_'+str(float(bc)/(len(genome.keys()))))
-			outputfile.write('\n')	
-			
+			outputfile.write('\n')
+#uncomment this if you want to find the protein with high oxidation state. This section will give oxidation state of carbon for top 6 proteins.
+
+
 #			genome_new=sorted(genome.items(),key=lambda x:x[1])
 #			count=1
 #			for i in genome_new:

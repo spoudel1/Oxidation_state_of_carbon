@@ -1,4 +1,4 @@
-#this script will read fiel from a directory and pass the fiel to oxidatin.py to calculate the average oxidation state of carbon
+#this script will read the file from a directory and pass the file to oxidation.py to calculate the average oxidation state of carbon
 #input: path to the directory that contains the protein fiel
 #outputfile: average oxidation state of each genome
 

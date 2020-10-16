@@ -50,7 +50,7 @@ def getfile(file1):
 		if line_strip.startswith('>'):
 			if count>0:
 				oxidation,aminoa=findox(sequence)
-				print oxidation,'came'
+				#print oxidation,'came'
 		#		_store[seq]=float(oxidation)/len(sequence)
 				_store[seq]=oxidation
 				_specifica[seq]=aminoa
@@ -64,7 +64,7 @@ def getfile(file1):
 	oxidation,aminoa=findox(sequence)
 #	_store[seq]=float(oxidation)/len(sequence)
 	_store[seq]=oxidation
-	print oxidation,'second'
+	#print oxidation,'second'
 	_specifica[seq]=aminoa
 	return _store,_specifica
 #	outputfile.write(seq+'\t'+str(len(sequence))+'\t'+str(oxidation)+'\t'+str(float(oxidation)/len(sequence))+'\n') # this will spit oxidation state of carbon for each sequence so uncomment this if that is what you want.
